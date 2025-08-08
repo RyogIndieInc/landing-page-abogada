@@ -6,26 +6,49 @@
     <!-- Optimiza mi sitio para que se vea bien en móviles. ¡Clave para buena experiencia y SEO -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Descripción de mi sitio/página web -->
-    <meta name="description" content="Landing page profesional de la abogada Mabel Melgar Oblitas">
+    <meta name="description" content="Sitio web profesional de la abogada penalista Mabel Melgar Oblitas. Conoce su perfil, servicios legales, áreas de práctica y cómo contactarla.">
     <!-- Lista de palabras clave que describen el sitio/página web -->
-    <meta name="keywords" content="Mabel Melgar Oblitas, abogada, derechos, leyes, landing page">
+    <meta name="keywords" content="Mabel Melgar Oblitas, abogada penalista, derecho penal, servicios legales, asesoría jurídica, defensa legal, Lima Perú, contacto abogado, landing page profesional">
     <!-- Le dice al navegador y a los motores que yo cree esta página -->
     <meta name="author" content="RyogDev">
     <!-- Indica que los buscadores pueden indexar el sitio y seguir los enlaces.-->
     <meta name="robots" content="index, follow">
     <!-- Evita contenido duplicado -->
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="https://ryogindieinc.github.io/landing-page-abogada/">
 
+    <!-- Facebook y redes sociales (Open Graph) -->
+    <meta property="og:title" content="Mabel Melgar Oblitas | Landing page">
+    <meta property="og:description" content="Sitio web profesional de la abogada penalista Mabel Melgar Oblitas. Conoce su perfil, servicios legales, áreas de práctica y cómo contactarla.">
+    <meta property="og:image" content="https://www.ryogdev.com/img/RyogdevLogo-removebg-preview.png">
+    <meta property="og:url" content="https://ryogindieinc.github.io/landing-page-abogada/">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Mabel Melgar Oblitas | Landing page">
+    <meta name="twitter:description" content="Sitio web profesional de la abogada penalista Mabel Melgar Oblitas. Conoce su perfil, servicios legales, áreas de práctica y cómo contactarla.">
+    <meta name="twitter:image" content="https://www.ryogdev.com/img/RyogdevLogo-removebg-preview.png">
+
+    <!-- Título de el sitio/página web -->
     <title>Mabel Melgar Oblitas | Landing page</title>
+
+    <!-- enlazando con css externo para dar estilo -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <!-- Si alguien guarda el sitio en su iPhone, este es el ícono que se muestra.-->
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
     <!-- Cabeza de página web-->
     <header>
-        <div>
-            <!-- división de logo-->
-            <div>
-                <img src="" alt="">
+        <!-- división de logo -->
+        <nav id="navbar">
+            <div class="navbar-left">
+                <figure>
+                    <img src="" alt="" class="logo">
+                </figure>
             </div>
 
             <!-- división de encabezado principal -->
@@ -33,35 +56,68 @@
                 <h1>Mabel Melgar Oblitas</h1>
             </div>
 
-            <!-- división de navbar -->
-            <div>
-                <ul>
-                    <li>Inicio</li>
-                    <li>Sobre mí</li>
-                    <li>Servicios</li>
-                    <li>Áreas de práctica</li>
-                    <li>Testimonios</li>
-                    <li>Contacto</li>
+            <!-- divsión barra de navegación -->
+            <div class="navbar-center">
+                <ul id="navbar-ul">
+                    <li><a href="#inicio"></a>Inicio</li>
+                    <li><a href="#sobremi"></a>Sobre mí</li>
+                    <li><a href="#servicios"></a>Servicios</li>
+                    <li><a href="#areadepractica"></a>Áreas de práctica</li>
+                    <li><a href="#testimonios"></a>Testimonios</li>
+                    <li><a href="#contacto"></a>Contacto</li>
                 </ul>
             </div>
 
-            <!-- división de button interactivo -->
-            <div>
-                <button>Contactar</button>
+            <!-- división de botón interactivo de contacto-->
+            <div class="navbar-right">
+                <button>Contratar</button>
             </div>
-        </div>
+        </nav>
     </header>
 
     <!-- Cuerpo de página web -->
     <main>
-        <section>
+        <!-- Sección: inicio -->
+        <section id="inicio">
             <h2>Mabel Melgar Oblitas, abogada <strong>penalista</strong></h2>
+        </section>
+
+        <!-- Sección: sobre mí -->
+        <section id="sobremi">
+
+        </section>
+
+        <!-- Sección: servicios -->
+        <section id="servicios">
+
+        </section>
+
+        <!-- Sección: área de práctica -->
+        <section id="areadepractica">
+
+        </section>
+
+        <!-- Sección: testimonios -->
+        <section id="testimonios">
+
         </section>
     </main>
 
     <!-- Pie de página web -->
     <footer>
-
+        <!-- Sección: contacto -->
+        <section id="contacto">
+            <!-- div de contacto -->
+            <div>
+                <h3>Información de contacto</h3>
+                <ul>
+                    <li><a href="mailto:mabelmelgarabogada@gmail.com" target="_blank" rel="noopener noreferrer"><i></i></a></li>
+                    <li><a href="tel:+51993377708" target="_blank" rel="noopener noreferrer"><i></i></a></li>
+                    <li><a href="https://wa.me/51993377708" target="_blank" rel="noopener noreferrer"><i></i></a></li>
+                </ul>
+            </div>
+        </section>
+        <p>© 2025 Mabel Melgar Oblitas. Todos los derechos reservados.</p>
     </footer>
 </body>
 </html>
