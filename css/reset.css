@@ -1,0 +1,43 @@
+/* 1. Reseteo general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: inherit;
+    line-height: 1.5;
+    text-decoration: none;
+    list-style: none;
+}
+
+/* 2. Configuración base del documento */
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+/* 3. Estilos base del cuerpo */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fff;
+    color: #333;
+}
+
+/* 4. Medios visuales */
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* 5. Elementos de formulario */
+button, input, select, textarea {
+    font: inherit;
+    border: none;
+    background: none;
+    outline: none;
+}
+
+/* 6. Enlaces */
+a {
+    color: inherit;
+}
