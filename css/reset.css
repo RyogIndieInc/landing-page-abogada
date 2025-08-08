@@ -1,43 +1,56 @@
 /* 1. Reseteo general */
-* {
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: inherit;
-    line-height: 1.5;
-    text-decoration: none;
-    list-style: none;
 }
 
-/* 2. Configuración base del documento */
+/* 2. Configuración base */
 html {
     font-size: 16px;
     scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%; /* Evita zoom raro en iOS */
 }
 
-/* 3. Estilos base del cuerpo */
+/* 3. Cuerpo */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Cormorant', sans-serif;
     background-color: #fff;
-    color: #333;
+    color: #000;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased; /* Mejora legibilidad */
 }
 
-/* 4. Medios visuales */
-img, picture, video, canvas, svg {
+/* 4. Elementos multimedia */
+img,
+picture,
+video,
+canvas,
+svg {
     display: block;
     max-width: 100%;
     height: auto;
 }
 
-/* 5. Elementos de formulario */
-button, input, select, textarea {
+/* 5. Formularios */
+input,
+button,
+textarea,
+select {
     font: inherit;
-    border: none;
-    background: none;
-    outline: none;
 }
 
 /* 6. Enlaces */
 a {
     color: inherit;
+    text-decoration: none;
+}
+
+/* 7. Listas */
+ul,
+ol {
+    list-style: none;
+} inherit;
 }

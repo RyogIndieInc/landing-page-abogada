@@ -1,1 +1,26 @@
 @import url('reset.css');
+
+:root{
+    --ff-heading: 'Playfair Display', serif;
+    --ff-body: 'Cormorant', serif;
+}
+
+/* Tipografía global */
+body {
+    font-family: var(--ff-body);
+  font-size: 1rem; /* 16px */
+    line-height: 1.5;
+}
+
+/* Titulares */
+h1,h2,h3,h4,h5,h6 {
+    font-family: var(--ff-heading);
+  font-weight: 600; /* usa 400/600/700 según necesites */
+  letter-spacing: -0.01em; /* sutil ajuste */
+    margin: 0 0 .6rem;
+}
+
+/* Si quieres que ciertos elementos sigan con Cormorant explícito */
+p, li, a, label, .small-text {
+    font-family: var(--ff-body);
+}
