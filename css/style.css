@@ -1,27 +1,574 @@
 @import url('reset.css');
 
-:root{
+/* 1. Variables de CSS */
+:root {
+    /* Fuentes */
     --ff-heading: 'Playfair Display', serif;
     --ff-body: 'Cormorant', serif;
+
+    /* Colores, con un toque de la bandera de Perú */
+    --color-primary: #5D4037; /* Marrón oscuro */
+    --color-secondary: #C89F5B; /* Dorado */
+    --color-tertiary: #A6211C; /* Rojo colonial, elegante y sobrio */
+    --color-text: #333333; /* Gris oscuro para legibilidad */
+    --color-text-light: #6A6A6A; /* Gris más claro para detalles */
+    --color-background: #F8F5F1; /* Crema suave */
+    --color-white: #FFFFFF;
+    --color-gray-light: #E0E0E0; /* Para bordes */
+
+    /* Espaciado */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 4rem;
 }
 
-/* Tipografía global */
+/* 2. Estilos base y de tipografía */
 body {
     font-family: var(--ff-body);
-  font-size: 1rem; /* 16px */
-    line-height: 1.5;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--color-text);
+    background-color: var(--color-background);
 }
 
-/* Titulares */
-h1,h2,h3,h4,h5,h6 {
+h1, h2, h3, h4, h5, h6 {
     font-family: var(--ff-heading);
-  font-weight: 600; /* usa 400/600/700 según necesites */
-  letter-spacing: -0.01em; /* sutil ajuste */
-    margin: 0 0 .6rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin: 0 0 var(--spacing-sm);
+    color: var(--color-primary);
 }
 
-/* Si quieres que ciertos elementos sigan con Cormorant explícito */
-p, li, a, label, .small-text {
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.5rem; }
+
+.container {
+    max-width: 1200px;
+    margin-inline: auto;
+    padding-inline: var(--spacing-sm);
+}
+
+.eyebrow {
     font-family: var(--ff-body);
+    font-size: 1rem;
+    color: var(--color-primary);
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
 }
 
+/* 3. Estilos de botones con animaciones y colores peruanos */
+.btn-cta, .btn {
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    border-radius: 4px;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-cta {
+    background-color: var(--color-secondary);
+    color: var(--color-white);
+    border: 2px solid var(--color-secondary);
+}
+
+.btn-cta:hover {
+    background-color: transparent;
+    color: var(--color-secondary);
+    transform: scale(1.05);
+}
+
+.btn {
+    background-color: transparent;
+    color: var(--color-primary);
+    border: 2px solid var(--color-primary);
+}
+
+.btn:hover {
+    background-color: var(--color-tertiary);
+    color: var(--color-white);
+    border-color: var(--color-tertiary);
+    transform: scale(1.05);
+}
+
+/* 4. Estilos para el header y la navegación */
+.header-inner {
+    padding: var(--spacing-sm) 0;
+    position: sticky;
+    top: 0;
+    background-color: var(--color-background);
+    border-bottom: 1px solid var(--color-gray-light);
+    z-index: 1000;
+}
+
+.header-inner .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
+.header-inner .marca img {
+    height: 40px;
+}
+
+#main-nav {
+    display: none;
+    width: 100%;
+    margin-top: var(--spacing-sm);
+    text-align: center;
+}
+
+#main-nav.is-active {
+    display: block;
+}
+
+#main-nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+#main-nav a {
+    font-family: var(--ff-body);
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+#main-nav a:hover {
+    color: var(--color-secondary);
+}
+
+.nav-toggle {
+    display: block;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    width: 30px;
+    height: 30px;
+}
+
+.nav-toggle .hamburger,
+.nav-toggle .hamburger::before,
+.nav-toggle .hamburger::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: var(--color-primary);
+    border-radius: 3px;
+    position: absolute;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.nav-toggle .hamburger {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.nav-toggle .hamburger::before {
+    top: -10px;
+}
+
+.nav-toggle .hamburger::after {
+    top: 10px;
+}
+
+.nav-toggle.is-active .hamburger {
+    background-color: transparent;
+}
+
+.nav-toggle.is-active .hamburger::before {
+    top: 0;
+    transform: rotate(45deg);
+}
+
+.nav-toggle.is-active .hamburger::after {
+    top: 0;
+    transform: rotate(-45deg);
+}
+
+/* Media query para pantallas de escritorio */
+@media (min-width: 769px) {
+    .header-inner .container {
+        flex-wrap: nowrap;
+    }
+
+    .nav-toggle {
+        display: none;
+    }
+
+    #main-nav {
+        display: block;
+        width: auto;
+        margin-top: 0;
+    }
+
+    #main-nav ul {
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: var(--spacing-lg);
+    }
+    
+    #main-nav a {
+        position: relative;
+        padding-bottom: 5px;
+    }
+
+    #main-nav a::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: var(--color-primary);
+        transition: width 0.3s ease;
+    }
+
+    #main-nav a:hover::after {
+        width: 100%;
+    }
+}
+
+/* 5. Íconos de contacto y redes sociales */
+.contacto-lista a i {
+    font-size: 1.5rem;
+    color: var(--color-primary);
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.contacto-lista a:hover i {
+    color: var(--color-tertiary);
+    transform: translateY(-5px);
+}
+
+.redes-sociales a i {
+    font-size: 1.5rem;
+    color: var(--color-text-light);
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.redes-sociales a:hover i {
+    color: var(--color-tertiary);
+    transform: translateY(-3px);
+}
+
+/* Estilos para la sección Hero (móvil) */
+#hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-block: var(--spacing-lg);
+    gap: var(--spacing-md);
+}
+
+#hero img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--color-primary);
+    margin-top: var(--spacing-md);
+    margin-bottom: var(--spacing-sm);
+}
+
+/* Media query para pantallas de escritorio */
+@media (min-width: 769px) {
+    #hero .container {
+        display: grid;
+        grid-template-columns: 1fr auto; /* Texto a la izquierda, imagen a la derecha */
+        align-items: center;
+        text-align: left;
+        gap: var(--spacing-lg);
+    }
+    
+    #hero .text-content {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+
+    #hero h1 {
+        font-size: 3.5rem;
+        line-height: 1.2;
+    }
+    
+    #hero .buttons-container {
+        display: flex;
+        gap: var(--spacing-sm);
+        margin-top: var(--spacing-md);
+    }
+
+    #hero img {
+        width: 250px;
+        height: 250px;
+        margin: 0;
+    }
+}
+
+/* Estilos para la sección "Sobre mí" (móvil) */
+#sobre-mi {
+    padding-block: var(--spacing-lg);
+    background-color: var(--color-white);
+    text-align: center;
+}
+
+#sobre-mi figure {
+    margin-bottom: var(--spacing-md);
+}
+
+#sobre-mi ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+    margin-block: var(--spacing-md);
+}
+
+#sobre-mi li {
+    font-size: 1.1rem;
+    color: var(--color-text-light);
+}
+
+/* Media query para pantallas de escritorio */
+@media (min-width: 769px) {
+    #sobre-mi .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--spacing-lg);
+        align-items: center;
+        text-align: left;
+    }
+    
+    #sobre-mi figure {
+        grid-column: 1;
+    }
+    
+    #sobre-mi .content {
+        grid-column: 2;
+    }
+
+    #sobre-mi ul {
+        justify-content: flex-start;
+    }
+}
+
+/* Estilos para la sección de servicios (móvil) */
+#servicios {
+    padding-block: var(--spacing-lg);
+    text-align: center;
+}
+
+.servicios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-md);
+}
+
+.servicio-card {
+    padding: var(--spacing-md);
+    background-color: var(--color-white);
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.servicio-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.servicio-card img {
+    height: 60px;
+    margin-inline: auto;
+    margin-bottom: var(--spacing-sm);
+}
+
+/* Estilos para la sección "Área de práctica" */
+#practicearea {
+    padding-block: var(--spacing-lg);
+    background-color: var(--color-white);
+}
+
+#practicearea .practicearea-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-md);
+}
+
+.practicearea-card {
+    background-color: #f5f0e9; /* Un color de fondo más suave para las tarjetas */
+    padding: var(--spacing-sm);
+    border-radius: 8px;
+    border: 1px solid var(--color-gray-light);
+}
+
+.practicearea-card dt {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-xs);
+}
+
+.practicearea-card dd {
+    margin-left: 0;
+    font-size: 1rem;
+    color: var(--color-text);
+}
+
+/* Estilos para la sección de testimonios */
+#testimonios {
+    padding-block: var(--spacing-lg);
+    text-align: center;
+}
+
+#testimonios .testimonios-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-md);
+}
+
+.testimonio-card {
+    background-color: var(--color-white);
+    padding: var(--spacing-md);
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* Sombra mejorada */
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+.testimonio-card:hover {
+    transform: translateY(-5px); /* Efecto de elevación sutil */
+}
+
+.testimonio-card blockquote {
+    font-size: 1.1rem;
+    font-style: italic;
+    color: var(--color-text-light);
+    margin: 0;
+}
+
+.testimonio-card footer {
+    font-weight: 600;
+    color: var(--color-primary);
+    font-style: normal;
+    display: block;
+    margin-top: var(--spacing-sm);
+}
+
+/* Media query para pantallas de escritorio */
+@media (min-width: 769px) {
+    #testimonios .testimonios-grid {
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    }
+}
+
+/* Estilos para el footer */
+footer.footer-principal {
+    background-color: var(--color-primary);
+    color: var(--color-background);
+    padding-block: var(--spacing-lg);
+    text-align: center;
+}
+
+footer.footer-principal #contacto {
+    margin-bottom: var(--spacing-lg);
+}
+
+footer.footer-principal #contacto h2 {
+    color: var(--color-background);
+    margin-bottom: var(--spacing-md);
+}
+
+footer.footer-principal .contacto-lista {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-md);
+}
+
+footer.footer-principal .contacto-lista a i {
+    font-size: 2rem;
+    color: var(--color-background);
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+footer.footer-principal .contacto-lista a:hover i {
+    color: var(--color-secondary);
+    transform: translateY(-5px);
+}
+
+footer.footer-principal #pie-pagina {
+    padding-block: var(--spacing-md) 0;
+}
+
+footer.footer-principal .redes-sociales {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-sm);
+}
+
+footer.footer-principal .redes-sociales a i {
+    font-size: 1.5rem;
+    color: var(--color-background);
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+footer.footer-principal .redes-sociales a:hover i {
+    color: var(--color-secondary);
+    transform: translateY(-3px);
+}
+
+footer.footer-principal #pie-pagina p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-top: var(--spacing-sm);
+}
+
+footer.footer-principal #pie-pagina p small a {
+    color: var(--color-background);
+    text-decoration: none;
+}
+
+/* Media query para pantallas de escritorio */
+@media (min-width: 769px) {
+    footer.footer-principal {
+        text-align: left;
+    }
+
+    footer.footer-principal .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--spacing-lg);
+        align-items: center;
+    }
+
+    footer.footer-principal #contacto h2 {
+        margin-bottom: 0;
+    }
+    
+    footer.footer-principal .contacto-lista {
+        justify-content: flex-start;
+    }
+
+    footer.footer-principal #pie-pagina {
+        text-align: right;
+    }
+
+    footer.footer-principal .redes-sociales {
+        justify-content: flex-end;
+    }
+}

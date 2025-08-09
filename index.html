@@ -1,246 +1,260 @@
-    <!DOCTYPE html>
-    <html lang="es">
-    <head>
-        <!-- Defino el tipo de codificación de caracteres. Así me aseguro que los acentos, ñ, y símbolos se vean bien en todos los navegadores. -->
-        <meta charset="UTF-8">
-        <!-- Optimiza mi sitio para que se vea bien en móviles. ¡Clave para buena experiencia y SEO -->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- Descripción de mi sitio/página web -->
-        <meta name="description" content="Sitio web profesional de la abogada penalista Mabel Melgar Oblitas. Conoce su perfil, servicios legales, áreas de práctica y cómo contactarla.">
-        <!-- Lista de palabras clave que describen el sitio/página web -->
-        <meta name="keywords" content="Mabel Melgar Oblitas, abogada penalista, derecho penal, servicios legales, asesoría jurídica, defensa legal, Lima Perú, contacto abogado, landing page profesional">
-        <!-- Le dice al navegador y a los motores que yo cree esta página -->
-        <meta name="author" content="RyogDev">
-        <!-- Indica que los buscadores pueden indexar el sitio y seguir los enlaces.-->
-        <meta name="robots" content="index, follow">
-        <!-- Evita contenido duplicado -->
-        <link rel="stylesheet" href="https://ryogindieinc.github.io/landing-page-abogada/">
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sitio web profesional de la abogada penalista Mabel Melgar Oblitas. Conoce su perfil, servicios legales, áreas de práctica y cómo contactarla.">
+    <meta name="keywords" content="Mabel Melgar Oblitas, abogada penalista, derecho penal, servicios legales, asesoría jurídica, defensa legal, Lima Perú, contacto abogado, landing page profesional">
+    <meta name="author" content="RyogDev">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://ryogindieinc.github.io/landing-page-abogada/">
 
-        <!-- Facebook y redes sociales (Open Graph) -->
-        <meta property="og:title" content="Mabel Melgar Oblitas | Landing page">
-        <meta property="og:description" content="Sitio web profesional de la abogada penalista Mabel Melgar Oblitas. Conoce su perfil, servicios legales, áreas de práctica y cómo contactarla.">
-        <meta property="og:image" content="https://www.ryogdev.com/assets/images/undraw_professional-woman-avatar_ivds.svg">
-        <meta property="og:url" content="https://ryogindieinc.github.io/landing-page-abogada/">
-        <meta property="og:type" content="website">
+    <meta property="og:title" content="Mabel Melgar Oblitas | Landing page">
+    <meta property="og:description" content="Sitio web profesional de la abogada penalista Mabel Melgar Oblitas. Conoce su perfil, servicios legales, áreas de práctica y cómo contactarla.">
+    <meta property="og:image" content="https://www.ryogdev.com/assets/images/undraw_professional-woman-avatar_ivds.svg">
+    <meta property="og:url" content="https://ryogindieinc.github.io/landing-page-abogada/">
+    <meta property="og:type" content="website">
 
-        <!-- Twitter Card -->
-        <meta name="twitter:card" content="summary_large_image">
-        <meta name="twitter:title" content="Mabel Melgar Oblitas | Landing page">
-        <meta name="twitter:description" content="Sitio web profesional de la abogada penalista Mabel Melgar Oblitas. Conoce su perfil, servicios legales, áreas de práctica y cómo contactarla.">
-        <meta name="twitter:image" content="https://www.ryogdev.com/assets/images/undraw_professional-woman-avatar_ivds.svg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Mabel Melgar Oblitas | Landing page">
+    <meta name="twitter:description" content="Sitio web profesional de la abogada penalista Mabel Melgar Oblitas. Conoce su perfil, servicios legales, áreas de práctica y cómo contactarla.">
+    <meta name="twitter:image" content="https://www.ryogdev.com/assets/images/undraw_professional-woman-avatar_ivds.svg">
 
-        <!-- Título de el sitio/página web -->
-        <title>Mabel Melgar Oblitas | Landing page</title>
+    <title>Mabel Melgar Oblitas | Landing page</title>
 
-        <!-- enlazando con css externo para dar estilo -->
-        <link rel="icon" href="favicon.ico" type="image/x-icon">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Alegreya+SC:ital,wght@0,400;0,500;0,700;0,800;0,900;1,400;1,500;1,700;1,800;1,900&family=Alegreya:ital,wght@0,400..900;1,400..900&family=Amatic+SC:wght@400;700&family=Bentham&family=Cinzel+Decorative:wght@400;700;900&family=Cormorant+SC:wght@300;400;500;600;700&family=Cormorant:ital,wght@0,300..700;1,300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Prata&family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
-
-        <!-- Si alguien guarda el sitio en su iPhone, este es el ícono que se muestra.-->
-        <link rel="apple-touch-icon" href="apple-touch-icon.png">  
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-        <link rel="stylesheet" href="./css/style.css">
-    </head>
-    <body>
-        <header class="header-inner">
-            <div class="container">
-                <!-- Logo/Marca -->
-                <a href="#hero" class="marca">
-                    <img src="./assets/images/undraw_professional-woman-avatar_ivds.svg" alt="Ilustración profesional Dra. Mabel Melgar">
-                </a>
-                <!-- Botón menú para móvil -->
-                <button class="nav-toggle" type="button" aria-controls="main-nav" aria-label="Abrir menú" aria-expanded="false"><span class="hamburger"></span><span class="sr-only">Abrir menú</span></button>
-                <!-- Barra de navegación -->
-                <nav id="main-nav" aria-label="Menu principal">
-                    <ul>
-                        <li><a href="#hero">Inicio</a></li>
-                        <li><a href="#sobre-mi">Sobre mí</a></li>
-                        <li><a href="#servicios">Servicios</a></li>
-                        <li><a href="#practicearea">Área de práctica</a></li>
-                        <li><a href="#testimonios">Testimonios</a></li>
-                        <li><a href="#contacto">Contacto</a></li>
-                    </ul>
-                    <!-- Enlace que te manda a contacto -->
-                </nav>
-                <a href="#consulta" class="btn-cta">Agendar consulta</a>
-            </div>
-        </header>
-
-        <main>
-            <section id="hero">
-                <span class="eyebrow">Abogada especialista en derecho penal</span>
-                <h1>Mabel Melgar Oblitas</h1>
-                <p>Tu confianza es nuestra prioridad: soluciones jurídicas claras, efectivas y hechas a tu medida.</p>
-                <button>Agendar consulta</button>
-                <a href="#servicios" class="btn">Ver servicios</a>
-                <img src="./assets/images/undraw_nice-to-meet-you_sqin.svg" alt="Ilustración de bienvenida" loading="lazy">
-            </section>
-
-            <section id="sobre-mi">
-                <h2>Sobre mí</h2>
-                <figure>
-                    <img src="" alt="Dra. Mabel Melgar en despacho, Lima" loading="lazy">
-                    <figcaption>Dra. Mabel Melgar — Abogada penalista en Lima, Perú</figcaption>
-                </figure>
-                <p>Con más de 15 años de experiencia en derecho penal y procesal, me dedico a brindar soluciones jurídicas claras, efectivas y personalizadas, defendiendo siempre los derechos de mis clientes con ética y compromiso</p>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+SC:ital,wght@0,400;0,500;0,700;0,800;0,900;1,400;1,500;1,700;1,800;1,900&family=Alegreya:ital,wght@0,400..900;1,400..900&family=Amatic+SC:wght@400;700&family=Bentham&family=Cinzel+Decorative:wght@400;700;900&family=Cormorant+SC:wght@300;400;500;600;700&family=Cormorant:ital,wght@0,300..700;1,300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Prata&family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header class="header-inner">
+        <div class="container">
+            <a href="#hero" class="marca" aria-label="Ir a la sección de inicio">
+                <img src="./assets/images/undraw_professional-woman-avatar_ivds.svg" alt="Ilustración profesional de la Dra. Mabel Melgar">
+            </a>
+            
+            <button class="nav-toggle" type="button" aria-controls="main-nav" aria-label="Abrir menú" aria-expanded="false">
+                <span class="hamburger"></span>
+                <span class="sr-only">Abrir menú</span>
+            </button>
+            
+            <nav id="main-nav" aria-label="Menu principal">
                 <ul>
-                    <li>+15 años de experiencia</li>
-                    <li>Especialista en derecho penal y procesal</li>
-                    <li>Español e inglés</li>
-                    <li>Certificada por el Colegio de Abogados de Lima</li>
+                    <li><a href="#hero">Inicio</a></li>
+                    <li><a href="#sobre-mi">Sobre mí</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#practicearea">Área de práctica</a></li>
+                    <li><a href="#testimonios">Testimonios</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
                 </ul>
-                <button type="button">Ver certificaciones</button>
-            </section>
+            </nav>
+            
+            <a href="#contacto" class="btn-cta">Agendar consulta</a>
+        </div>
+    </header>
 
-            <section id="servicios">
-                <div class="container">
-                    <h2 class="titulo-seccion">Servicios</h2>
-                    <p class="descripcion-seccion">Asesoría legal personalizada y soluciones eficientes para tus necesidades jurídicas en Perú.</p>
-
-                    <div class="servicios-grid">
-                        <div class="servicio-card">
-                            <img src="./assets/icons/derecho-penal.png" alt="Derecho Penal">
-                            <h3>Derecho Penal</h3>
-                            <p>Defensa y representación en casos penales, garantizando tus derechos en todo momento.</p>
-                        </div>
-
-                        <div class="servicio-card">
-                            <img src="./assets/icons/derecho-civil.png" alt="Derecho Civil">
-                            <h3>Derecho Civil</h3>
-                            <p>Asesoría en contratos, propiedades, herencias y demás asuntos civiles.</p>
-                        </div>
-
-                        <div class="servicio-card">
-                            <img src="./assets/icons/derecho-laboral.png" alt="Derecho Laboral">
-                            <h3>Derecho Laboral</h3>
-                            <p>Protección y asesoría en relaciones laborales, despidos y derechos del trabajador.</p>
-                        </div>
-
-                        <div class="servicio-card">
-                            <img src="./assets/icons/derecho-familia.png" alt="Derecho de Familia">
-                            <h3>Derecho de Familia</h3>
-                            <p>Soluciones en divorcios, custodia de menores, pensiones y más.</p>
-                        </div>
+    <main>
+        <article id="hero">
+            <div class="container">
+                <div class="text-content">
+                    <span class="eyebrow">Abogada especialista en derecho penal</span>
+                    <h1>Mabel Melgar Oblitas</h1>
+                    <p>Tu confianza es nuestra prioridad: soluciones jurídicas claras, efectivas y hechas a tu medida.</p>
+                    
+                    <div class="buttons-container">
+                        <a href="#contacto" role="button" class="btn">Agendar consulta</a>
+                        <a href="#servicios" class="btn">Ver servicios</a>
                     </div>
                 </div>
-            </section>
-
-            <section id="practicearea">
-                <h2>Áreas de práctica</h2>
-                <dl>
-                    <dt>Derecho Penal</dt>
-                    <dd>Defensa y asesoría en procesos penales, garantizando el respeto a los derechos fundamentales de nuestros clientes.</dd>
-
-                    <dt>Derecho Civil</dt>
-                    <dd>Resolución de conflictos contractuales, sucesiones, propiedad y otros asuntos civiles con soluciones claras y eficaces.</dd>
-
-                    <dt>Derecho Familiar</dt>
-                    <dd>Asesoría en divorcios, tenencia de menores, pensión de alimentos y procesos de adopción, priorizando el bienestar familiar.</dd>
-
-                    <dt>Derecho Laboral</dt>
-                    <dd>Defensa de los derechos de trabajadores y empleadores en conflictos laborales, despidos y reclamaciones.</dd>
-                </dl>
-            </section>
-
-            <section id="testimonios" aria-label="Opiniones de clientes sobre la Dra. Mabel Melgar">
-                <h2>Testimonios</h2>
-                <div class="testimonios-grid">
-                    
-                    <article class="testimonio">
-                        <blockquote>
-                            “Gracias a la Dra. Mabel Melgar, logré resolver mi caso de herencia en tiempo récord. Profesional y dedicada.”
-                        </blockquote>
-                        <p class="cliente">— María G., Lima</p>
-                    </article>
-
-                    <article class="testimonio">
-                        <blockquote>
-                            “Su asesoría fue clara y honesta. Me acompañó en todo el proceso y siempre me sentí respaldado.”
-                        </blockquote>
-                        <p class="cliente">— Juan P., Arequipa</p>
-                    </article>
-
-                    <article class="testimonio">
-                        <blockquote>
-                            “La defensa que realizó en mi caso penal fue impecable. Eternamente agradecida.”
-                        </blockquote>
-                        <p class="cliente">— Carmen R., Cusco</p>
-                    </article>
-
-                    <article class="testimonio">
-                        <blockquote>
-                            “Profesional con gran ética. Me explicó todo de forma sencilla y me ayudó a tomar decisiones seguras.”
-                        </blockquote>
-                        <p class="cliente">— Diego L., Trujillo</p>
-                    </article>
-
-                    <article class="testimonio">
-                        <blockquote>
-                            “Gracias a su experiencia, pude ganar la custodia de mi hijo. Recomendada al 100%.”
-                        </blockquote>
-                        <p class="cliente">— Paola S., Lima</p>
-                    </article>
-
-                    <article class="testimonio">
-                        <blockquote>
-                            “Un trato humano y cercano. No solo es abogada, también es una aliada en momentos difíciles.”
-                        </blockquote>
-                        <p class="cliente">— Luis C., Piura</p>
-                    </article>
-
-                    <article class="testimonio">
-                        <blockquote>
-                            “Me brindó soluciones rápidas y efectivas en un caso complicado de contratos.”
-                        </blockquote>
-                        <p class="cliente">— Gabriela T., Chiclayo</p>
-                    </article>
-
-                    <article class="testimonio">
-                        <blockquote>
-                            “Atención personalizada y resultados sobresalientes. Siempre disponible para mis consultas.”
-                        </blockquote>
-                        <p class="cliente">— Ricardo F., Tacna</p>
-                    </article>
-
-                    <article class="testimonio">
-                        <blockquote>
-                            “Demostró un conocimiento profundo del derecho penal y un compromiso excepcional con mi caso.”
-                        </blockquote>
-                        <p class="cliente">— Valeria M., Lima</p>
-                    </article>
-
+                <img src="./assets/images/undraw_nice-to-meet-you_sqin.svg" alt="Ilustración de bienvenida a la Dra. Mabel Melgar" loading="lazy">
+            </div>
+        </article>
+        
+        <section id="sobre-mi">
+            <div class="container">
+                <figure>
+                    <img src="" alt="Dra. Mabel Melgar en su despacho profesional, Lima" loading="lazy">
+                    <figcaption>Dra. Mabel Melgar — Abogada penalista en Lima, Perú</figcaption>
+                </figure>
+                <div class="content">
+                    <h2>Sobre mí</h2>
+                    <p>Con más de 15 años de experiencia en derecho penal y procesal, me dedico a brindar soluciones jurídicas claras, efectivas y personalizadas, defendiendo siempre los derechos de mis clientes con ética y compromiso</p>
+                    <ul>
+                        <li>+15 años de experiencia</li>
+                        <li>Especialista en derecho penal y procesal</li>
+                        <li>Español e inglés</li>
+                        <li>Certificada por el Colegio de Abogados de Lima</li>
+                    </ul>
+                    <a href="#" role="button" class="btn">Ver certificaciones</a>
                 </div>
-            </section>
-        </main>
+            </div>
+        </section>
 
-        <footer>
-            <!-- Sección de contacto -->
+        <section id="servicios">
+            <div class="container">
+                <h2 class="titulo-seccion">Servicios</h2>
+                <p class="descripcion-seccion">Asesoría legal personalizada y soluciones eficientes para tus necesidades jurídicas en Perú.</p>
+                <div class="servicios-grid">
+                    <article class="servicio-card">
+                        <img src="./assets/icons/derecho-penal.png" alt="Icono de Derecho Penal">
+                        <h3>Derecho Penal</h3>
+                        <p>Defensa y representación en casos penales, garantizando tus derechos en todo momento.</p>
+                    </article>
+
+                    <article class="servicio-card">
+                        <img src="./assets/icons/derecho-civil.png" alt="Icono de Derecho Civil">
+                        <h3>Derecho Civil</h3>
+                        <p>Asesoría en contratos, propiedades, herencias y demás asuntos civiles.</p>
+                    </article>
+
+                    <article class="servicio-card">
+                        <img src="./assets/icons/derecho-laboral.png" alt="Icono de Derecho Laboral">
+                        <h3>Derecho Laboral</h3>
+                        <p>Protección y asesoría en relaciones laborales, despidos y derechos del trabajador.</p>
+                    </article>
+
+                    <article class="servicio-card">
+                        <img src="./assets/icons/derecho-familia.png" alt="Icono de Derecho de Familia">
+                        <h3>Derecho de Familia</h3>
+                        <p>Soluciones en divorcios, custodia de menores, pensiones y más.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="practicearea">
+            <div class="container">
+                <h2>Área de práctica</h2>
+                <div class="practicearea-grid">
+                    <div class="practicearea-card">
+                        <dt>Derecho Penal</dt>
+                        <dd>Defensa en casos de delitos contra la vida, el cuerpo y la salud, delitos económicos, fraudes, y más.</dd>
+                    </div>
+                    
+                    <div class="practicearea-card">
+                        <dt>Derecho Procesal Penal</dt>
+                        <dd>Asesoría y representación en todas las etapas del proceso penal, desde la investigación preliminar hasta el juicio oral.</dd>
+                    </div>
+                    
+                    <div class="practicearea-card">
+                        <dt>Ciberdelincuencia</dt>
+                        <dd>Protección y defensa contra delitos informáticos, robo de identidad, estafas en línea y ciberacoso.</dd>
+                    </div>
+                    
+                    <div class="practicearea-card">
+                        <dt>Litigios penales</dt>
+                        <dd>Representación en juicios, audiencias, apelaciones y recursos de casación.</dd>
+                    </div>
+                    
+                    <div class="practicearea-card">
+                        <dt>Asesoría Jurídica</dt>
+                        <dd>Consultoría especializada para prevenir riesgos penales, elaborar estrategias de defensa y responder a consultas legales.</dd>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonios" aria-label="Opiniones de clientes sobre la Dra. Mabel Melgar">
+            <h2>Testimonios</h2>
+            <div class="testimonios-grid">
+                <article class="testimonio">
+                    <blockquote>
+                        “Gracias a la Dra. Mabel Melgar, logré resolver mi caso de herencia en tiempo récord. Profesional y dedicada.”
+                        <footer>— <cite>María G., Lima</cite></footer>
+                    </blockquote>
+                </article>
+
+                <article class="testimonio">
+                    <blockquote>
+                        “Su asesoría fue clara y honesta. Me acompañó en todo el proceso y siempre me sentí respaldado.”
+                        <footer>— <cite>Juan P., Arequipa</cite></footer>
+                    </blockquote>
+                </article>
+
+                <article class="testimonio">
+                    <blockquote>
+                        “La defensa que realizó en mi caso penal fue impecable. Eternamente agradecida.”
+                        <footer>— <cite>Carmen R., Cusco</cite></footer>
+                    </blockquote>
+                </article>
+
+                <article class="testimonio">
+                    <blockquote>
+                        “Profesional con gran ética. Me explicó todo de forma sencilla y me ayudó a tomar decisiones seguras.”
+                        <footer>— <cite>Diego L., Trujillo</cite></footer>
+                    </blockquote>
+                </article>
+
+                <article class="testimonio">
+                    <blockquote>
+                        “Gracias a su experiencia, pude ganar la custodia de mi hijo. Recomendada al 100%.”
+                        <footer>— <cite>Paola S., Lima</cite></footer>
+                    </blockquote>
+                </article>
+
+                <article class="testimonio">
+                    <blockquote>
+                        “Un trato humano y cercano. No solo es abogada, también es una aliada en momentos difíciles.”
+                        <footer>— <cite>Luis C., Piura</cite></footer>
+                    </blockquote>
+                </article>
+
+                <article class="testimonio">
+                    <blockquote>
+                        “Me brindó soluciones rápidas y efectivas en un caso complicado de contratos.”
+                        <footer>— <cite>Gabriela T., Chiclayo</cite></footer>
+                    </blockquote>
+                </article>
+
+                <article class="testimonio">
+                    <blockquote>
+                        “Atención personalizada y resultados sobresalientes. Siempre disponible para mis consultas.”
+                        <footer>— <cite>Ricardo F., Tacna</cite></footer>
+                    </blockquote>
+                </article>
+
+                <article class="testimonio">
+                    <blockquote>
+                        “Demostró un conocimiento profundo del derecho penal y un compromiso excepcional con mi caso.”
+                        <footer>— <cite>Valeria M., Lima</cite></footer>
+                    </blockquote>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer-principal">
+        <div class="container">
             <section id="contacto">
                 <h2>Contacto</h2>
-                <ul class="contacto-lista">
-                    <li>
-                        <a href="mailto:mabelmelgarabogada@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Enviar correo a Mabel Melgar">
-                            <i class="fas fa-envelope"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="tel:+51993377708" target="_blank" rel="noopener noreferrer" aria-label="Llamar a Mabel Melgar">
-                            <i class="fas fa-phone"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://wa.me/51993377708" target="_blank" rel="noopener noreferrer" aria-label="Enviar mensaje por WhatsApp a Mabel Melgar">
-                            <i class="fab fa-whatsapp"></i>
-                        </a>
-                    </li>
-                </ul>
+                <address>
+                    <ul class="contacto-lista">
+                        <li>
+                            <a href="mailto:mabelmelgarabogada@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Enviar correo a Mabel Melgar">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="tel:+51993377708" target="_blank" rel="noopener noreferrer" aria-label="Llamar a Mabel Melgar">
+                                <i class="fas fa-phone"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://wa.me/51993377708" target="_blank" rel="noopener noreferrer" aria-label="Enviar mensaje por WhatsApp a Mabel Melgar">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </address>
             </section>
 
-            <!-- Pie de página -->
             <section id="pie-pagina">
-                <ul class="redes-sociales">
+                <ul class="redes-sociales" aria-label="Redes sociales de Mabel Melgar">
                     <li>
                         <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Facebook de Mabel Melgar">
                             <i class="fab fa-facebook"></i>
@@ -253,10 +267,13 @@
                     </li>
                 </ul>
                 <p>
-                    <i class="fas fa-copyright"></i>
-                    Todos los derechos reservados | Mabel Melgar Oblitas 2025
+                    <small>
+                        <i class="fas fa-copyright"></i>
+                        Todos los derechos reservados | Mabel Melgar Oblitas 2025
+                    </small>
                 </p>
             </section>
-        </footer>
-    </body>
-    </html>
+        </div>
+    </footer>
+</body>
+</html>
